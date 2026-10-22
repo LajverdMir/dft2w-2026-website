@@ -1,10 +1,10 @@
 import { VisionInitiative, VisionPillar } from "./index.types";
 
 export const VISION_GLANCE_IMAGE = {
-  src: "/about/dftw-at-a-glance.jpg",
-  alt: "DFT²W at a Glance — Three Strategic Pillars, One Vision: IEEE ICDI² AI&ML, IEEE ICoDT² and ICON-DFT², their focus areas and events, cross-cutting initiatives, anticipated outcomes and who should participate. 17–18 November 2026, NUST, Islamabad, Pakistan.",
-  width: 1518,
-  height: 1036,
+  src: "/about/dftw-poster.jpg",
+  alt: "DFT²W at a Glance — IEEE Digital Futures and Transformative Technologies Week: Technology Converging Toward Humanity. Engineering the Digital Future of Developing and Emerging Economies, Nov 17–18, 2026. NUST, IEEE and AzTU.",
+  width: 1536,
+  height: 1024,
 };
 export const VISION_GLANCE_TITLE = "DFT²W at a Glance";
 export const VISION_GLANCE_HINT = "Tap the image to open it full size and zoom in";
