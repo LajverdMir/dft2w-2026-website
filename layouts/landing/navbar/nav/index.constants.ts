@@ -2,7 +2,7 @@ import { NavbarItemProps } from "@/layouts/landing/navbar/nav-item/index.types";
 
 export const NAVBAR_ITEMS: NavbarItemProps[] = [
   {
-    href: "/vision",
+    href: "/about",
     label: "About DFT²W",
     hasMenu: true,
     items: [

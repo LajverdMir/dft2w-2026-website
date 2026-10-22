@@ -14,10 +14,11 @@ export const MapCard = () => {
         </p>
         <div className="mt-auto pt-6">
           <Button
-            href="#virtual-tour"
+            href={VENUE_MAPS_HREF}
             label="Virtual Tour"
             tone="blue"
             size="panel"
+            external
           />
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import { REGISTRATION_FORM_HREF } from "@/features/registration/index.constants";
 import { REGISTER_MENU_ITEMS, REGISTER_MENU_LABEL } from "./index.constants";
 import { RegisterMenuProps } from "./index.types";
 
@@ -53,32 +54,44 @@ export const RegisterMenu = ({ variant }: RegisterMenuProps) => {
         }
       }}
     >
-      <button
-        type="button"
-        aria-expanded={open}
-        aria-controls={menuId}
-        aria-haspopup="true"
-        onClick={() => setOpen((value) => !value)}
-        className={`inline-flex h-10 items-center justify-center gap-2 rounded-[5px] bg-brand-green px-3 text-[11px] font-normal whitespace-nowrap text-white uppercase transition-colors hover:bg-brand-green-line focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-yellow group-data-[open=true]/register:bg-brand-green-line sm:min-w-42 sm:text-[13px] lg:min-w-0 lg:gap-1.5 lg:px-2.5 lg:text-[12px] xl:min-w-42 xl:gap-2 xl:px-3 xl:text-[13px] ${
+      <div
+        className={`flex h-10 items-stretch overflow-hidden rounded-[5px] bg-brand-green text-white sm:min-w-42 lg:min-w-0 xl:min-w-42 ${
           isBar ? "" : "w-full"
         }`}
       >
-        {REGISTER_MENU_LABEL}
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-          className="size-3.5 shrink-0 transition-transform duration-300 group-data-[open=true]/register:rotate-180"
+        <a
+          href={REGISTRATION_FORM_HREF}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex flex-1 items-center justify-center px-3 text-[11px] font-normal whitespace-nowrap text-white uppercase no-underline transition-colors hover:bg-brand-green-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-yellow sm:text-[13px] lg:px-2 lg:text-[12px] xl:px-3 xl:text-[13px]"
         >
-          <path
-            d="m6 9 6 6 6-6"
-            stroke="currentColor"
-            strokeWidth="2.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </button>
+          {REGISTER_MENU_LABEL}
+        </a>
+        <button
+          type="button"
+          aria-expanded={open}
+          aria-controls={menuId}
+          aria-haspopup="true"
+          aria-label="Show registration options"
+          onClick={() => setOpen((value) => !value)}
+          className="inline-flex w-9 shrink-0 items-center justify-center border-l border-white/30 transition-colors hover:bg-brand-green-line focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-yellow group-data-[open=true]/register:bg-brand-green-line lg:w-7.5 xl:w-9"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+            className="size-3.5 shrink-0 transition-transform duration-300 group-data-[open=true]/register:rotate-180"
+          >
+            <path
+              d="m6 9 6 6 6-6"
+              stroke="currentColor"
+              strokeWidth="2.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
 
       <div
         id={menuId}

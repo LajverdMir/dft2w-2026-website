@@ -79,7 +79,7 @@ export const VisionPillarCard = ({
       </div>
 
       <div className="mt-auto bg-vision-navy px-2 pt-2.5 pb-2 text-white min-h-[68px] h-auto">
-        <ul className="m-0 flex list-none items-start justify-between gap-1 p-0">
+        <ul className="m-0 grid list-none grid-cols-3 items-start gap-x-1 gap-y-2.5 p-0 sm:flex sm:justify-between sm:gap-1">
           {events.map((event) => (
             <li
               key={event.label}
@@ -94,7 +94,7 @@ export const VisionPillarCard = ({
                   className="h-6 w-auto max-w-full object-contain"
                 />
               </div>
-              <span className="max-w-full text-center text-[9px] leading-tight font-medium break-words sm:text-[10px] lg:text-[9px]">
+              <span className="max-w-full text-center text-[11px] leading-tight font-medium sm:text-[10px] lg:text-[9px]">
                 {event.label}
               </span>
             </li>
